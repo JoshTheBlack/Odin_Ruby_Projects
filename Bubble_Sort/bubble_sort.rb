@@ -8,9 +8,7 @@ def bubble_sort(list)
             break if i > n
             if x < list[i-1]
                 not_sorted = true
-                y = list[i-1]
-                list [i-1] = x
-                list[i] = y
+                list[i-1], list[i] = x, list[i-1]
             end
         end
         n -= 1
@@ -19,5 +17,5 @@ def bubble_sort(list)
 end
 
 if __FILE__ == $0
-    p bubble_sort([5,3,1,6,7,8,2,4])
+    p bubble_sort([5,3,1,2,2,9,6,7,8,2,4])
 end
